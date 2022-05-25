@@ -110,7 +110,7 @@ export const GET_SUBREDDIT_BY_TOPIC = gql`
 `;
 
 export const GET_ALL_VOTES_BY_POST_ID = gql`
-  query MyQuery($topic: String!) {
+  query MyQuery($post_id: ID!) {
     getVotesByPostId(post_id: $post_id) {
       id
       post_id
