@@ -1,16 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
-import {
-  BellIcon,
-  ChatIcon,
-  GlobeIcon,
-  PlusIcon,
-  SparklesIcon,
-  SpeakerphoneIcon,
-  VideoCameraIcon
-} from '@heroIcons/react/outline';
+import { BellIcon } from '@heroIcons/react/outline';
+import { ChatIcon } from '@heroIcons/react/outline';
+import { GlobeIcon } from '@heroIcons/react/outline';
+import { PlusIcon } from '@heroIcons/react/outline';
+import { SparklesIcon } from '@heroIcons/react/outline';
+import { SpeakerphoneIcon } from '@heroIcons/react/outline';
+import { VideoCameraIcon } from '@heroIcons/react/outline';
 
-import { ChevronDownIcon, HomeIcon, MenuIcon, SearchIcon } from '@heroIcons/react/solid';
+import { ChevronDownIcon } from '@heroIcons/react/solid';
+import { HomeIcon } from '@heroIcons/react/solid';
+import { MenuIcon } from '@heroIcons/react/solid';
+import { SearchIcon } from '@heroIcons/react/solid';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 
