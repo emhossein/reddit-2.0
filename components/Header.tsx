@@ -10,7 +10,6 @@ import {
   VideoCameraIcon
 } from '@heroIcons/react/outline';
 import { ChevronDownIcon, HomeIcon, MenuIcon, SearchIcon } from '@heroIcons/react/solid';
-import Home from '../pages';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Link from 'next/link';
 

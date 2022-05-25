@@ -39,7 +39,6 @@ function PostBox({ subreddit }: Props) {
   } = useForm<FormData>();
 
   const onSubmit = handleSubmit(async (formData) => {
-    console.log(formData);
     const notification = toast.loading('Creating new Post...');
 
     try {
@@ -53,10 +52,8 @@ function PostBox({ subreddit }: Props) {
       });
 
       const subredditExist = getSubredditListByTopic.length > 0;
-      console.log(subredditExist);
 
       if (!subredditExist) {
-        console.log('Subreddit is new! -> creating NEW subreddit!');
         const {
           data: { insertSubreddit: newSubreddit }
         } = await addSubreddit({
@@ -64,7 +61,6 @@ function PostBox({ subreddit }: Props) {
             topic: formData.subreddit
           }
         });
-        console.log('Creating post...', formData);
         const image = formData.postImage || '';
 
         const {
@@ -78,11 +74,7 @@ function PostBox({ subreddit }: Props) {
             username: session?.user?.name
           }
         });
-        console.log('new post added!', newPost);
       } else {
-        console.log('using existing subreddit!');
-        console.log(getSubredditListByTopic);
-
         const image = formData.postImage || '';
         const {
           data: { insertPost: newPost }
@@ -95,7 +87,6 @@ function PostBox({ subreddit }: Props) {
             username: session?.user?.name
           }
         });
-        console.log('new post added!', newPost);
       }
       setValue('postBody', '');
       setValue('postTitle', '');

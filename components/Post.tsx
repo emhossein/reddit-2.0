@@ -58,7 +58,6 @@ function Post({ post }: Props) {
     const votes: Vote[] = data?.getVotesByPostId;
 
     const vote = votes?.find((vote) => vote.username == session?.user?.name)?.upvote;
-    console.log(votes?.find((vote) => vote.username == session?.user?.name)?.upvote);
     setVote(vote);
   }, [data]);
 
